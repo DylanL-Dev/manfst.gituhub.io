@@ -16,8 +16,6 @@
   src: url("../police/HatschSans_PERSONAL_USE_ONLY.otf") format("opentype");
 }
 
-
-
 /* END POLICE */
 /*U1 SETTINGSU2 COLOR U3 TYPOGRAPHYU4 LAYOUTS*/ /* U2 COLOR */
 :root {
@@ -74,9 +72,9 @@
 .bg-canary {
   background-color: var(--cr-canary);
 }
-.bg-cardinal {
-  /*background-color: #062b16;*/
-}
+/*.bg-cardinal {
+  background-color: #062b16;
+}*/
 .bg-creme {
   background-color: var(--cr-creme);
 }
@@ -311,7 +309,7 @@ h5.t-tomato,
   font: var(--t-b);
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  letter-spacing: -0.01em;
+
   text-align: justify;
 }
 h6 {
@@ -1025,10 +1023,10 @@ svg {
     height: 10px;
   }
   #main::-webkit-scrollbar-track {
-    background-color: var(--cr-creme);
+    background-color: var(--cr-creme); /* couleur de fond pour scroll bar */
   }
   #main::-webkit-scrollbar-thumb {
-    background-color: #797979a9;
+    background-color: #cac5c5a9; /* couleur scroll bar */
     outline: none;
   }
   #main::-webkit-scrollbar-button {

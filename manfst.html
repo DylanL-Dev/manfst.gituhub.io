@@ -8,15 +8,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
     />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86"> -->
+    <meta name="robots" content="index, follow" />
     <!-----------------------------POLICE Google------------------------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <!-----------------------------End POLICE Google------------------------------------------->
     <link rel="canonical" href="https://manfst.fr/" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/styles.min.css" />
@@ -49,8 +49,13 @@
     </script>
 
     <title>Manfst</title>
+    <meta
+      name="description"
+      content="Manifest est un bureau aux multiples facettes, nous créons des environnements audacieux, raffinés et uniques qui incarnent une esthétique intemporelle tout en étendant simultanément une empreinte créative. Contactez-nous : contact@manfst.fr. 47 Boulevard de Courcelles, 75008 Paris."
+    />
 
-    <meta name="description" content="" />
+    <link rel="icon" type="image/x-icon" href="img/logo/Favicon.ico" />
+
     <style>
       /*
   * Prefixed by https://autoprefixer.github.io
@@ -160,6 +165,7 @@
       [type="submit"],
       button {
         -webkit-appearance: button;
+        appearance: button;
       }
       [type="button"]::-moz-focus-inner,
       [type="reset"]::-moz-focus-inner,
@@ -204,6 +210,7 @@
       }
       [type="search"] {
         -webkit-appearance: textfield;
+        appearance: textfield;
         outline-offset: -2px;
       }
       [type="search"]::-webkit-search-decoration {
@@ -1157,8 +1164,7 @@
           transform: translate(-50%, 0);
         }
       }
-      html.is_loaded {
-      }
+
       #main {
         opacity: 0;
       }
@@ -1170,8 +1176,7 @@
         -webkit-animation: 0.4s fadeOut both;
         animation: 0.4s fadeOut both;
       }
-      [data-animate] {
-      }
+
       [data-animate] > * {
         opacity: 0;
       }
@@ -1340,7 +1345,7 @@
           background-color: var(--cr-creme);
         }
         #main::-webkit-scrollbar-thumb {
-          background-color: #797979a9;
+          background-color: #cac5c5a9; /* couleur scroll bar */
           outline: none;
         }
         #main::-webkit-scrollbar-button {
@@ -1526,23 +1531,35 @@
         -ms-transform: unset;
         transform: unset;
       }
-    </style>
 
+      .email-popup-overlay {
+        backdrop-filter: blur(30px);
+        height: 0;
+        left: 0;
+        margin-left: var(--s-sidebar);
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        transform: translateY(var(--s-viewport-height));
+        transition: 0.4s transform, 0.5s opacity, 0.4s height;
+        transition-timing-function: ease-out;
+        width: calc(100vw - var(--s-sidebar));
+        z-index: 420;
+      }
+    </style>
+    <style>
+      @media (max-width: 768px) {
+        #section-about-about .section-content {
+          padding: 30px 0 30px 15px;
+        }
+      }
+    </style>
     <link
       href="css/styles.min.css"
       rel="stylesheet"
       type="text/css"
       media="all"
     />
-
-    <!--
-    <link
-      href="s/files/1/0609/0860/1587/t/4/assets/styles.min.css?v=142355973396311101951664884607"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-    />
-    -->
 
     <!-- CMSPROEDITSHEADSTART -->
     <style>
@@ -1639,11 +1656,11 @@
               <img
                 width="1820"
                 height="2730"
-                src="img/menu.png"
+                src="img/Menu_V1.png"
                 data-sizes="auto"
-                alt=""
+                alt="chambre moderne avec lit double beige et gris"
                 class="lazyload"
-              /><!--   <img width="1820" height="2730" data-src="//cdn.shopify.com/s/files/1/0609/0860/1587/files/bar-design-interior-design-miami-rs3-designs-1_2048x2048.jpg?v=1644120433" data-srcset="//cdn.shopify.com/s/files/1/0609/0860/1587/files/bar-design-interior-design-miami-rs3-designs-1_compact.jpg?v=1644120433 160w,//cdn.shopify.com/s/files/1/0609/0860/1587/files/bar-design-interior-design-miami-rs3-designs-1_medium.jpg?v=1644120433 240w,//cdn.shopify.com/s/files/1/0609/0860/1587/files/bar-design-interior-design-miami-rs3-designs-1_large.jpg?v=1644120433 480w,//cdn.shopify.com/s/files/1/0609/0860/1587/files/bar-design-interior-design-miami-rs3-designs-1_grande.jpg?v=1644120433 600w,//cdn.shopify.com/s/files/1/0609/0860/1587/files/bar-design-interior-design-miami-rs3-designs-1_1024x1024.jpg?v=1644120433 1024w,//cdn.shopify.com/s/files/1/0609/0860/1587/files/bar-design-interior-design-miami-rs3-designs-1_2048x2048.jpg?v=1644120433 2048w," data-sizes="auto" alt="" class="lazyload " > -->
+              />
             </div>
           </div>
           <!--Newsletters mobile-->
@@ -1703,7 +1720,7 @@
 
               <a
                 class="social-icon"
-                href="#"
+                href="https://www.pinterest.fr/manfstfr/"
                 aria-label="Link to Pinterest account"
               >
                 <svg
@@ -1717,6 +1734,24 @@
                       d="M13,0C4.81,0,0,6.11,0,11c0,3,2,6,3,6s2,0,2-1-2-2-2-5C3,6.65,7.77,3,13,3c4.63,0,7,3.22,7,7,0,5-2.74,9-6,9-1.8,0-3.43-1.17-3-3,.52-2.18,1-2,2-6a2.28,2.28,0,0,0-2-3,4,4,0,0,0-4,4,5.72,5.72,0,0,0,1,3s-2.24,7.86-2.58,9.26C4.77,26.05,3.94,30,4.94,30S7,28,9,23c.3-.74,1-3,1-3,.6,1.14,3.14,2,5,2,5.54,0,9-5.24,9-12C24,4.89,19.58,0,13,0Z"
                     ></path>
                   </g>
+                </svg>
+              </a>
+
+              <a
+                href="https://open.spotify.com/user/315wpprxk2a52n7vcbjkpv2x4kau?si=faaf88967b9640bc"
+                aria-label="Link to Spotify account"
+                rel="noopener"
+                target="_blank"
+              >
+                <svg
+                  class="svg-social-spotify"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 167.49 167.48"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M83.74,0a83.74,83.74,0,1,0,83.75,83.74A83.74,83.74,0,0,0,83.74,0Zm38.41,120.78a5.22,5.22,0,0,1-7.18,1.73c-19.67-12-44.42-14.73-73.57-8.07a5.22,5.22,0,0,1-2.32-10.18C71,97,98.34,100.11,120.42,113.6A5.22,5.22,0,0,1,122.15,120.78ZM132.4,98a6.52,6.52,0,0,1-9,2.16C100.91,86.29,66.59,82.28,40,90.37a6.53,6.53,0,1,1-3.8-12.5C66.59,68.65,104.4,73.11,130.25,89a6.53,6.53,0,0,1,2.15,9Zm.88-23.74c-27-16-71.52-17.5-97.29-9.68a7.83,7.83,0,1,1-4.55-15c29.58-9,78.76-7.25,109.83,11.2a7.83,7.83,0,0,1-8,13.47Z"
+                  ></path>
                 </svg>
               </a>
             </div>
@@ -1811,18 +1846,18 @@
         <section id="section-about-hero" class="hero-section">
           <div class="desktop-only">
             <img
-              src="img/Page ABOUT 2.png"
+              src="img/Couv2.png"
               data-sizes="auto"
-              alt=""
+              alt="Deux sofas noir d’une place de style contemporain"
               class="lazyload img-parallax full-bleed"
             />
           </div>
 
           <div class="mobile-only">
             <img
-              src="img/1_Manfst.png"
+              src="img/Mobile_Couv2.png"
               data-sizes="auto"
-              alt=""
+              alt="Deux sofas noir d’une place de style contemporain"
               class="lazyload img-parallax"
             />
           </div>
@@ -1830,11 +1865,11 @@
           <div class="mobile-announcement mobile-only" style="opacity: 1">
             <span class="announcement-text t-body">
               DESIGN * CONCEPTION * INVESTISSEMENT * MANFST * MANIFEST YOUR
-              IDENTITY DESIGN * CONCEPTION * INVESTISSEMENT * MANFST * MANIFEST
-              YOUR IDENTITY DESIGN * CONCEPTION * INVESTISSEMENT * MANFST *
+              IDENTITY * DESIGN * CONCEPTION * INVESTISSEMENT * MANFST *
               MANIFEST YOUR IDENTITY DESIGN * CONCEPTION * INVESTISSEMENT *
-              MANFST * MANIFEST YOUR IDENTITY DESIGN * CONCEPTION *
-              INVESTISSEMENT * MANFST * MANIFEST YOUR IDENTITY
+              MANFST * MANIFEST YOUR IDENTITY * DESIGN * CONCEPTION *
+              INVESTISSEMENT * MANFST * MANIFEST YOUR IDENTITY * DESIGN *
+              CONCEPTION * INVESTISSEMENT * MANFST * MANIFEST YOUR IDENTITY
             </span>
           </div>
         </section>
@@ -1856,8 +1891,9 @@
 
         <section id="section-about-about" class="frontpage-press">
           <div class="flex-h">
+            <!---->
             <div class="section-content bg-cream flex-v f-j-e">
-              <h4 class="text_manfst_mobile">
+              <h4>
                 Bouleversant les attentes traditionnelles avec de nouvelles
                 perspectives, Manifest est un bureau de design d’intérieur et
                 d’investissement immobilier aux multiples facettes.
@@ -1869,7 +1905,7 @@
                 <img
                   src="img/1_Manfst.png"
                   data-sizes="auto"
-                  alt=""
+                  alt="Cuisine avec table à manger noir et rouge moderne"
                   class="lazyload img-parallax"
                 />
               </div>
@@ -1882,7 +1918,7 @@
                   height="2730"
                   src="img/2_Manfst.png"
                   data-sizes="auto"
-                  alt=""
+                  alt="Cuisine avec table à manger noir et rouge moderne"
                   class="lazyload"
                 />
               </div>
@@ -1913,32 +1949,22 @@
                 </div>
               </div>
             </div>
-            <div class="mobile-only">
-              <div class="object-fit">
-                <img
-                  width="2000"
-                  height="3000"
-                  src="img/menu.png"
-                  data-sizes="auto"
-                  alt=""
-                  class="lazyload"
-                />
-              </div>
-            </div>
+
             <div class="section-content intro fixed-width f-v f-j-e">
               <div class="intro-title t-h-4 titre_manfst">
                 Bureau de design et d’investissement incitant à la réflexion,
-                d’influence internationale
+                d’influence internationale.
               </div>
               <div class="intro-content t-body">
                 <p>
                   Manifest est un bureau aux multiples facettes basé en
-                  Normandie et en île de France. Composé d’une équipe passionnée
-                  de designers, d’architectes, de créatifs et d’experts en
-                  investissement immobilier et en développement de patrimoine.
-                  Réunis par des intérêts interdisciplinaires de
-                  l’investissement, l’art du design d’intérieur et la
-                  manifestation de soi.
+                  <span itemprop="addressRegion">Normandie</span> et en
+                  <span itemprop="addressRegion">île de France</span>. Composé
+                  d’une équipe passionnée de designers, d’architectes, de
+                  créatifs et d’experts en investissement immobilier et en
+                  développement de patrimoine. Réunis par des intérêts
+                  interdisciplinaires de l’investissement, l’art du design
+                  d’intérieur et la manifestation de soi.
                 </p>
                 <p>
                   En restant toujours fidèle aux objectifs et à la personnalité
@@ -1975,7 +2001,7 @@
                     height="1365"
                     src="img/2_Manfst.png"
                     data-sizes="auto"
-                    alt=""
+                    alt="Canapé en noir et une table à manger noir et rouge moderne"
                     class="lazyload"
                   />
                 </span>
@@ -2109,7 +2135,7 @@
                 </a>
 
                 <a
-                  href="https://www.pinterest.com/rjimenez4523/"
+                  href="https://www.pinterest.fr/manfstfr/"
                   aria-label="Link to Pinterest account"
                 >
                   <svg
@@ -2126,7 +2152,10 @@
                   </svg>
                 </a>
 
-                <a href="#" aria-label="Link to Spotify account">
+                <a
+                  href="https://open.spotify.com/user/315wpprxk2a52n7vcbjkpv2x4kau?si=bb591c1441b048d4"
+                  aria-label="Link to Spotify account"
+                >
                   <svg
                     class="svg-social-spotify"
                     xmlns="http://www.w3.org/2000/svg"
@@ -2142,20 +2171,19 @@
             </div>
 
             <div class="footer-legal">
-              <!--
-              <p class="footer-copyright">
-                © Raymond Nicolas. ALL RIGHTS RESERVED
-              </p>
+              <p class="footer-copyright">© MANFST. TOUS DROITS RÉSERVÉS</p>
               <p>
-                <a href="policies/refund-policy.html">REFUND POLICY</a>
+                <a href="mentions_légales.html" target="_self"
+                  >MENTION LÉGALES</a
+                >
 
-                <a href="policies/privacy-policy.html">PRIVACY POLICY</a>
+                <a href="cgu.html" target="_self">CGU</a>
 
-                <a href="policies/terms-of-service.html">TERMS OF SERVICE</a>
-
-                <a href="https://view-source.com">SITE CREDIT</a>
+                <a href="politique_de_confidentialité.html" target="_self"
+                  >POLITIQUE DE CONFIDENTIALITÉ</a
+                >
               </p>
-            --></div>
+            </div>
           </div>
         </section>
       </div>
@@ -2243,42 +2271,7 @@
 
     <script
       defer
-      src="//cdn.shopify.com/s/files/1/0609/0860/1587/t/4/assets/js-polyfill-intersection-observer.js?v=34925017227746732191662388211"
-      type="text/javascript"
-    ></script>
-    <script
-      defer
-      src="//cdn.shopify.com/s/files/1/0609/0860/1587/t/4/assets/js-polyfill-smooth-scroll.js?v=148379743528603512151662388211"
-      type="text/javascript"
-    ></script>
-    <script
-      defer
-      src="//cdn.shopify.com/s/files/1/0609/0860/1587/t/4/assets/js-polyfill-focus-visible.js?v=141642740593105286241662388211"
-      type="text/javascript"
-    ></script>
-    <script
-      defer
       src="//cdn.shopify.com/s/files/1/0609/0860/1587/t/4/assets/js-plugin-lazysizes.js?v=66108640031549341671662388211"
-      type="text/javascript"
-    ></script>
-    <script
-      defer
-      src="//cdn.shopify.com/s/files/1/0609/0860/1587/t/4/assets/js-plugin-infinite-scrolling.js?v=13815149076068874991662388211"
-      type="text/javascript"
-    ></script>
-    <script
-      defer
-      src="//cdn.shopify.com/s/files/1/0609/0860/1587/t/4/assets/js-plugin-reframe.js?v=66174629294003836801662388211"
-      type="text/javascript"
-    ></script>
-    <script
-      defer
-      src="//cdn.shopify.com/s/files/1/0609/0860/1587/t/4/assets/js-plugin-flickity.js?v=91303299893684682021662388211"
-      type="text/javascript"
-    ></script>
-    <script
-      defer
-      src="//cdn.shopify.com/s/files/1/0609/0860/1587/t/4/assets/js-plugin-vimeo-player.js?v=106215567386030207171662388211"
       type="text/javascript"
     ></script>
 

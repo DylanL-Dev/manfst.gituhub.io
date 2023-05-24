@@ -1040,6 +1040,7 @@ form .form-success {
   flex: 1;
   pointer-events: none;
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 .item-quantity input[name="quantity"]::-webkit-inner-spin-button,
 .item-quantity input[name="quantity"]::-webkit-outer-spin-button {
@@ -1148,6 +1149,7 @@ form .form-success {
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .object-fit.object-fit > *,
 .object-contain.object-fit > * {
@@ -1179,6 +1181,7 @@ form .form-success {
   height: 101% !important;
   -o-object-fit: cover;
   object-fit: cover;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 table {
@@ -1561,7 +1564,6 @@ html.menu-is-active #nav-trigger hr:last-of-type {
   transform: translate(-50%, -50%) rotate(225deg);
 }
 .email-popup-overlay {
-  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   height: 0;
   left: 0;
@@ -1569,16 +1571,8 @@ html.menu-is-active #nav-trigger hr:last-of-type {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  -webkit-transform: translateY(var(--s-viewport-height));
-  -ms-transform: translateY(var(--s-viewport-height));
   transform: translateY(var(--s-viewport-height));
-  -webkit-transition: 0.5s opacity, 0.4s height, 0.4s -webkit-transform;
-  transition: 0.5s opacity, 0.4s height, 0.4s -webkit-transform;
-  -o-transition: 0.4s transform, 0.5s opacity, 0.4s height;
   transition: 0.4s transform, 0.5s opacity, 0.4s height;
-  transition: 0.4s transform, 0.5s opacity, 0.4s height, 0.4s -webkit-transform;
-  -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   width: calc(100vw - var(--s-sidebar));
   z-index: 420;
@@ -1657,6 +1651,7 @@ html.menu-is-active #nav-trigger hr:last-of-type {
   width: 100%;
   border-bottom: 1px solid var(--cr-white);
   font: var(--t-h-t);
+  font-family: "Urbanist", sans-serif !important;
 }
 .email-popup-overlay
   .email-popup-bottom
@@ -2409,7 +2404,7 @@ section.frontpage-mission .t-h-1 {
   font: var(--t-h-3);
   font-size: 24px;
   line-height: 30px;
-  font-family: "SharpeMe_PERSONAL";
+  font-family: "SharpeTh_PERSONAL";
 }
 
 .frontpage-mission-title strong {
@@ -2970,7 +2965,7 @@ section.frontpage-mission .t-h-1 {
 }
 
 .article-next:hover {
-  background-color: #dad3d8 !important; /* blueviolet*/
+  background-color: #dad3d8 !important; /* blueviolet*/ /*surlvole article*/
 }
 
 .article-next .flex-v {
@@ -3525,6 +3520,7 @@ section.frontpage-mission .t-h-1 {
 #contact-form {
   color: var(--cr-black);
   font: var(--t-h-t);
+
   text-align: center;
   white-space: initial;
   width: calc(100vw - var(--s-sidebar));
@@ -3533,7 +3529,7 @@ section.frontpage-mission .t-h-1 {
   display: inline-block;
 }
 #contact-form > .f-v {
-  background-image: url(/img/new_contact/contact_12.jpg);
+  background-color: #dad3d8;
   background-repeat: no-repeat;
   -o-object-fit: cover;
   object-fit: cover;
@@ -3558,6 +3554,7 @@ section.frontpage-mission .t-h-1 {
   padding-bottom: 1%;
   font: var(--t-h-t);
   width: 100%;
+  font-family: "Urbanist", sans-serif !important;
 }
 #contact-form .flex-h > div input::-webkit-input-placeholder {
   color: var(--cr-black);
@@ -3576,9 +3573,11 @@ section.frontpage-mission .t-h-1 {
   font: var(--t-h-t);
 }
 #contact-form .flex-h > div input::placeholder {
+  /*police contact placeholder*/
   color: var(--cr-black);
   font: var(--t-h-t);
 }
+
 #contact-form .flex-h > div input:focus::-webkit-input-placeholder {
   color: transparent;
 }
@@ -3598,6 +3597,7 @@ section.frontpage-mission .t-h-1 {
   color: var(--cr-black);
   font: var(--t-b-t);
   font-size: 14px;
+  font-family: "Urbanist", sans-serif;
 }
 #contact-form input.email-popup-input {
   font: var(--t-h-t);
@@ -3608,6 +3608,7 @@ section.frontpage-mission .t-h-1 {
 #contact-form .newsletter-message-field label {
   color: var(--cr-black);
   font: var(--t-b-t);
+  font-family: "Urbanist", sans-serif;
   font-size: 14px;
 }
 #contact-form .message-popup-input {
@@ -4071,20 +4072,29 @@ https://flickity.metafizzy.co
   font-family: "SharpeMe_PERSONAL";
 }
 
-.btn_deskstop_pdf{
+.btn_deskstop_pdf {
   width: 30%;
-  margin-left: 33%;
-margin-top: 15px;
-text-decoration: none !important;
+  margin-left: 30%;
+  margin-top: 15px;
+  text-decoration: none !important;
 }
 
 /* Parti mobile !!!!!!!!!!!!!!!!!*/
+
 @media (max-width: 768px) {
-  .text_manfst_mobile {
-    font-family: "SharpeMe_PERSONAL";
-    font-size: 22px;
-    line-height: 30px;
-    text-align: left;
+  .btn_deskstop_pdf {
+    width: 40%;
+  }
+
+  /*.bandeau-mobile{
+    margin-bottom: 110px;
+  }*/
+  .btn_mobile {
+    margin-left: 16px;
+    margin-bottom: 15px;
+  }
+  #section-about-about .section-content {
+    padding: 30px 0 30px 15px;
   }
 
   #contact-form .f-v {
@@ -4092,7 +4102,7 @@ text-decoration: none !important;
   }
 
   #contact-form {
-    background-image: url(https://images.unsplash.com/photo-1583862675423-7da18197e824?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    background-color: #dad3d8;
     width: 100%;
     height: auto;
     -webkit-backdrop-filter: blur(2px);
@@ -4100,51 +4110,51 @@ text-decoration: none !important;
   }
 
   .white_texte {
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   #contact-form .flex-h > div label {
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   #contact-form .newsletter-message-field label {
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   #contact-form .t-h-4 {
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   #contact-form .contact-form .flex-h div input {
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   /* webkit contact placholder */
 
   #contact-form .contact-form .flex-h div input::-webkit-input-placeholder {
-    color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
   }
 
   #contact-form .contact-form .flex-h div input::-moz-placeholder {
-    color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
   }
 
   #contact-form .contact-form .flex-h div input:-ms-input-placeholder {
-    color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
   }
 
   #contact-form .contact-form .flex-h div input::-ms-input-placeholder {
-    color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
   }
 
   #contact-form .contact-form .flex-h div input::placeholder {
-    color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
   }
 
   /* End webkit contact placholder */
 
   .field textarea {
-    color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
   }
 
   .newsletter-email-submit {
@@ -4168,6 +4178,6 @@ text-decoration: none !important;
   .t-h-4 {
     font-size: 30px;
   }
-
-
 }
+
+

@@ -1,0 +1,88 @@
+/*---------------------------------------CGU---------------------------------------*/
+html body{
+    background-color: #dad3d8;
+}
+a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .content_cgu {
+    padding: 60px 50px 25px;
+    font-family: "Urbanist", sans-serif;
+
+  }
+  .title_cgu_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title_cgu_1 h1 {
+    width: 260px;
+  }
+  
+  #info_cgu {
+    font-size: 20px;
+  }
+  
+  .info_profil {
+    font-size: 20px;
+    padding-top: 15px;
+    text-align: left;
+  }
+  
+  .info_text {
+    width: 85%;
+  }
+  
+  .title_cgu_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title_cgu_2 h1 {
+    width: 37%;
+  }
+  
+  .text_center {
+    text-align: center;
+  }
+  
+  .text_italic {
+    font-style: italic;
+  }
+  
+  .text_bolder {
+    font-weight: bold;
+  }
+  
+  .text_size {
+    font-size: 25px;
+  }
+  /*Mobile*/
+  @media (max-width: 768px) {
+    .title_cgu_1 {
+      width: 100%;
+    }
+    .title_cgu_1 h1 {
+      background-color: transparent;
+      width: 100%;
+    }
+  
+    .title_cgu_2 {
+      width: 100%;
+    }
+    .title_cgu_2 h1 {
+      background-color: transparent;
+      width: 100%;
+    }
+  
+    .info_text {
+      width: 100%;
+    }
+  }
+  /*End Mobile*/
+  /*---------------------------------------End CGU---------------------------------------*/
+  

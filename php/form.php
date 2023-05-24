@@ -9,13 +9,12 @@
   <body>       
       <!--Contact php contact principale-->
       <?php
-      
-      if (isset($_POST['message'])) {
-        $entete  = 'MIME-Version: 1.0' . "\r\n";
-        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $entete .= "From: no-reply@manifestdesign.fr" . "\r\n" .
-                   'Reply-to: ' . $_POST['email'];
-
+     if (isset($_POST['message'])) {
+      $entete  = 'MIME-Version: 1.0' . "\r\n";
+      $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+      $entete .= 'From: ' . $_POST['email'] . "\r\n";
+      $entete .= 'Reply-to: ' . $_POST['email'] . "\r\n";
+  
         $name = htmlspecialchars($_POST['name']);
         $email = htmlspecialchars($_POST['email']);
         $message = htmlspecialchars($_POST['message']);
@@ -41,7 +40,7 @@
                                 Sujet : </b>' . $subject . '</br>
                                 Message : </b>' . $message . '</p>';
 
-              $retour = mail('dylan.lefebvre76@live.com', 'Envoi depuis page Contact', $message_body, $entete);
+              $retour = mail('contact@manfst.fr', 'Envoi depuis page Contact', $message_body, $entete);
               if ($retour) {
                 echo '   
                 <div class="main-container">
@@ -79,7 +78,7 @@
     $message = '<h3>Bonjour Ilhame, cette personne souhaite faire partie de ta Newsletters</h3>
                 <p>Email : <b>' . $_POST['email'] . '</b></p>';
 
-    $retour = mail('newsletters@manifestdesign.fr', 'Un nouvel abonné pour ta newsletter', $message, $entete);  
+    $retour = mail('newsletter@manfst.fr', 'Un nouvel abonné pour ta newsletter', $message, $entete);  
 
     if ($retour) {
       echo '
